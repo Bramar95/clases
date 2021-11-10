@@ -66,7 +66,7 @@ Product owner; dueño del producto:
 -escribe historias de usuario, las prioriza y las pone en el product backlog
 
 
-Scrum Master; guia del equipo de trabajo, facilitador: 
+Scrum Master; guia del equipo de trabajo, facilitador, no jefe: 
 -comprueba que cada miembro use sus habilidades unicas en pos del proyecto
 -responsable de contrololar los tiempos, la reuniones, y el proceso en general
 -ayuda a evitar obstaculos
@@ -75,22 +75,63 @@ Scrum Master; guia del equipo de trabajo, facilitador:
 Equipo de desarrollo o de trabajo:
 -tienen la responsabilidad 
 -son horizontales; las decisiones se toman por consenso
--son autoorganizados y versatiles para cumplir todas las tareas asignadas
+-son autoorganizados y versatiles para cumplir todas las tareas 
+-no hay nadie que los maneje directamente
 
 Stakeholder; accionistas:
 -personas que utilizaran o seran afectadas por producto o servicio
 
 
-Flujo de trbajo
+Flujo de trabajo 
+-sera administrado y gestionado por los documentos
+
+Documentos
 Product backlog:
 -conjunto de todos los requisitos del proyecto
+-es gestionado por el product owner
 -contiene descripciones genericas de funcionalidades deseables
+-el proyecto que tenga mas urgencia en cuanto impacto positivo hacia el cliente se desarrolla primero
 
 Sprint backlog: 
 -conjunto de requisitos a desarrollar en el sprint actual
--la lista de tareas es gestionada por equipo de desarrollo
+-la lista de tareas es gestionada por el equipo de desarrollo
 -la duracion de cada sprint(periodo en el que se lleva a cabo el proyecto) es definifa por el equipo
--suelen durar de 2 a 4 semanas
+-suelen durar de 2 a 4 semanas, y es siempre la misma en cada iteracion
+-se hace uso de un tablero de tareas para organizar todas las tareas( Trelo, Monday):
+    story: historias de usuarios que originaron las tareas
+    To Do: tareas a realizar en el sprint
+    in progress: tareas en curso en el sprint
+    to verify: tareas listas que requieren verificacion
+    done: tareas listas y verificadas
+
+    Historias de usuario
+        -permiten describir un comportamiento o una funcionalidad desde la perpectiva del usuario
+        -tienen condiciones que deben cumplirse para constatar la finalizacion de una tarea
+        -siguen un formato: 
+            -como {rol de usuario}; 
+            -quiero {objetivo}; 
+            -para poder {beneficio}
 
 
+Ceremomias
+-estas destinadas a promover la comunicacion del equipo
+-visibilizar las tareas y obstaculos que puedan surgir en el desarrollo
+
+Planificacion
+-trabajo que se hara durante el sprint
+-se calcula e identifica cuanto esfuerzo probable a invertir en las tareas propuestas
+-se hace con todo el equipo
+
+Daily stand-up
+-se comunica durante no mas de tres minutos la respuesta a tres preguntas:
+que hizo el colaborador ayer?, tuvo impedimientos para realizar la tarea?, que hara hoy?
+-suelen realizarse de pie
+
+Revision o demo
+-revisar el trabajo completado o incompleto para asi poder presentar el trabajo completo a los holders
+-suele durar 4 horas para el sprint de 1 mes
+
+Reflexiva
+-se enfoca en la mejora continua del equipo y de la comunicacion del proceso
+-suele durar 4 horas para el sprint de 1 mes
 */
