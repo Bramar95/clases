@@ -37,14 +37,14 @@ Debilidades:
 
 Valores
 -Se valora mas:
-Individuos e interacciones
-Software funcional
+Individuos e interacciones; se valora al cliente que va a usar ese software, se lo integra al proceso; comunicacion bidireccional
+Software funcional; 
 Colaboracion con el cliente
 Respuesta al cambio
 
 -Se valora menos:
 Procesos y herramientas
-Documentacion compleja
+Documentacion compleja; no se debe estar atado a contratos y documentaciones
 Apego a contratos
 Seguimiento de un plan
 
@@ -97,7 +97,8 @@ Sprint backlog:
 -la lista de tareas es gestionada por el equipo de desarrollo
 -la duracion de cada sprint(periodo en el que se lleva a cabo el proyecto) es definifa por el equipo
 -suelen durar de 2 a 4 semanas, y es siempre la misma en cada iteracion
--se hace uso de un tablero de tareas para organizar todas las tareas( Trelo, Monday):
+-se busca desarrollar en cada sprint un mvp, un minimo de producto funcional 
+-Scrum board: se hace uso de un tablero de tareas para organizar todas las tareas( Trelo, Monday) en cinco columnas:
     story: historias de usuarios que originaron las tareas
     To Do: tareas a realizar en el sprint
     in progress: tareas en curso en el sprint
@@ -105,6 +106,7 @@ Sprint backlog:
     done: tareas listas y verificadas
 
     Historias de usuario
+        -se definen en base a la empatia
         -permiten describir un comportamiento o una funcionalidad desde la perpectiva del usuario
         -tienen condiciones que deben cumplirse para constatar la finalizacion de una tarea
         -siguen un formato: 
@@ -128,7 +130,8 @@ que hizo el colaborador ayer?, tuvo impedimientos para realizar la tarea?, que h
 -suelen realizarse de pie
 
 Revision o demo
--revisar el trabajo completado o incompleto para asi poder presentar el trabajo completo a los holders
+-revisar el trabajo completado o incompleto para asi poder presentar elpwd
+ trabajo completo a los holders
 -suele durar 4 horas para el sprint de 1 mes
 
 Reflexiva
