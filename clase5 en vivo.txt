@@ -1,0 +1,17 @@
+En un array solo se le asigna valor a cada indice, en cambio a un object que admite funciones
+Los archivos .JSON son cadenas de texto, un formato sencillo
+El this es recursivo y hace referencia la objeto
+Las claves o keys de los strings, los toma tambein como objeto
+Las propiedades de un bobjeto se pueden agrupar secuencialemente object.prop,prop
+En el if ternario la primera expresion a ejecutar luego de la condición siempre es verdadera, la segunda es fals
+//El modulo fs nos permite leer y escribir archivos del disco duro de node
+el metodo fyleradsync tomas dos argumentos, la ruta de carpeta, y la codificacion del archivo
+un espacio vacio tiene informacion binaria
+ñpara pasar un json a a array usar parse
+usar cons cuando queremos que una variable no cambie
+//El modulo nativo método "fs.readFileSync()" sirve para leer y acceder a archivos de texto o strings que tengamos guardados en local 
+//El metodo module.exports sirve para compartir y exportar contenido de archivos, como objetos literales y arrays, con otras carpetas u otros archivos
+//Para requerir ese archivo se usa el metodo require() desde el archico que solicita al otro fichero, y se lo guarda dentro de una variable del mismo nombre del archivo a importar
+let modulo= require("modulo");
+//Si el modulo es creado o local se especifica dentro del parametro "./carpeta/nombreArchivo"
+//No hace falta declarar la extension si es formato .js
