@@ -17,12 +17,14 @@ Cliente/Request:
 parte de la funcionalidad; esta definido por lenguajes CSS(estilos visuales), HTML(estructura) y JavaScript(interaccion del sitio)
 
 Servidor/Response:
--Es el que brinda una respuesta o response a las peticiones del cliente;
--Brinda acceso a los rcursos y servicios que solicita el cliente
+-Es cualquier computadora que procese solicitudes y brinda una respuesta o response a las peticiones del cliente a traves de internet;
+-Brinda acceso a los recursos y servicios que solicita el cliente
 -En una misma computadora se puede encontrar el servidor y el cliente
 -El servidor mediante un Web server(programa del servidor) recibe el request, procesa la peticion y luego envia una respuesta al cliente o navegador, como puede ser devolver la pagina solicitada
 -Del lado del servidor nos referimos al Back-end, que engloba toda la logica interna y funcionamiento del sitio. Esto permite cargar las solicitudes enviadas por el cliente
 Esta definido por bases de datos como MongoDB,lenguajes como PHP, Javascript y frameworks como express y Laravel
+
+
 
 INTRODUCCION A HTTP(protocolo de transferencia de hipertexto)
 -Gestiona el flujo de datos o las transacciones entre cliente y servidor en la web
@@ -36,7 +38,7 @@ URI(Identificador de recursos uniformes)
 -URN: indica el nombre exacto del recurso uniforme. El nombre del dominio y el nombre del recurso; "www.lasvegas.com/casinos-lujosos"
 
 Headers y Body
--Bajo HTTP la informacion que viaja con cada request y con cada response lo hace a traves de headers y bodys
+-Dentro del esquema de peticiones y respuestas y bajo el formato HTTP, la informacion que viaja con cada request y con cada response lo hace a traves de headers y bodys
 -Los headers son porciones de texto que contienen informacion importante requerida por el cliente o el servidor
 -Separados por una linea blanca, vienen los bodys que contienen la informacion misma de cada request y response, 
 que puede ser el codigo de una pagina a modo de respuesta o el contenido de un formulario a modo de request
@@ -63,5 +65,101 @@ EXPRESS;FRAMEWORKS
 -Es uno de los modulos mas estables y mas utilizados por node
 -Es una libreria de codigo o modulo nativo con funcionalidades armadas para trabajar
 
+Instalar Express:
+-Primero se debe abrir el terminal y poner "npm init"
+-Una vez creado el archivo "package.json", debemos poner "npm install express"
+-Quien quiera clonar el proyecto podra requerir todas la dependencias instaladas con el comando "npm install"
 
-//Sistema de ruteo y response*/
+Ejercicio1, Requerir y usar Express
+
+-Primero, desde el entry point se debe requerir el modulo, creando la variable express y asi almacenar en ella el modulo express
+-Esta libreria devuelve una funcion que encapsula toda la funcionalidad de Express
+-Para poder usar todos esos metodos y propiedades de Express, debemos crear la variable app y almacenar en ella la ejecucion del objeto express
+
+const express= require("express");
+const app= express();
+
+SERVIDOR WEB CON EXPRESS; LEVANTAR UN SERVIDOR WEB
+
+
+Ejercicio 2, Instanciar servidor
+-Se requiere el modulo express en una variable del mismo nombre
+-Se guarda en otra variable la ejecucion de la funcion
+const express = require('express');
+const app = express();
+
+
+2-Al objeto app le pedimos el metodo get,
+-Recibe dos parametros: un string que define la url de la ruta, y un callback con dos parametros(req, res),
+ambos son objetos que nos brinda Express y contiene toda la informacion y funcionalidad para trabajar los pedidos y las respuestas
+-req contendra todos los metodos y propiedades de la peticion que llegó y queremos trabajar
+-res contendra todos los metodos y propiedades de la respuesta que enviaremos y queremos trabajar
+-Dentro del callback definimos la respuesta a enviar,en este caso pidiendo para el objeto res el metodo send
+-Como parametro recibe lo que queremos mostrar en el navegador, una respuesta de texto al navegador o cliente
+
+app.get("/",(req, res)=>
+ res.send("Bienvenidos al sitio")
+ );
+
+1-Al objeto app le pedimos el metodo listen, que se encargara de levantar el servidor
+-Recibe dos parametros: el puerto, y un callback que devuelve un mensaje
+
+app.listen(8000, ()=>
+ console.log("Levantando un servidor con Express")
+ ); 
+
+SISTEMA DE ROUTEO Y RESPONSE
+-Al crear un servidor es necesario definir un sistema de ruteo o route system, para que el servidor pueda
+atender a las diferentes peticiones de un cliente y responder o redirigir en consecuencia de las mismas
+-Son aquellas respuestas que predefinimos dependiendo la ruta por la que la persona accede al visitar nuestra pagina
+-La respuesta puede ser de tipo variado o de cualquier formato que pueda interpretar el navegador: un PDF, texto plano, texto en formato HTTP, un fichero de imagen
+
+Definiendo una ruta:
+-El primer objeto es app, la variable que almacena la funcionalidad de Express
+-Luego, debemos agregar el metodo http a utilizar(get, put, patch,delete. send)
+-Como primer parametro tenemos un string, que representa la ruta a la que ha ingresado nuestro cliente, como puede ser la razis o home del sitio "/"
+-Dentro del callback definimos la logica a ejecutar para manejar la respuesta al pedido del cliente
+-Dentro del metodo puede ir una variable, como puede ser dentro del metodo send:
+
+app.get("/", (req, res)=> {
+    let contenido= "P+agina principal";
+    res.send(contenido);
+});
+
+Ejercicio 1, Ruta GET home
+const express = require('express');
+const app = express();
+
+app.get(("/home"), (req, res)=> {
+    res.send("Hola, estamos en el home")//Enviamos un texto como respuesta
+    });
+
+Ejercicio 2, Ruta GET perfil
+const express = require('express');
+const app = express();
+
+let saludo = "Bienvenido/a, ahora estamos en tu perfil"
+
+app.get(("/perfil"), (req, res)=>{
+    res.send(saludo);//Enviamos una variable como respuesta
+});
+
+Ejercicio 3, Ruta GET agregar producto
+
+const express = require('express');
+const app = express();
+
+let producto= {
+    tipoProducto: null,
+    precio: null,
+    cantidad: null 
+}
+
+app.get(("/producto/agregar"), (req, res)=> {
+    res.send(producto); //Enviamos un objeto como respuesta
+});
+
+
+
+
+*/
