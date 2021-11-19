@@ -1,5 +1,5 @@
 /*
-Comandos basico del git
+Comandos basicos del git
 pwd: nos muestra la carpeta actual en la que nos encontramos.
 mkdir: nos permite crear carpetas, p. ej. mkdir NuevaCarpeta
 touch: nos permite crear archivos nuevos, p.ej. touch NuevoArchivo.txt

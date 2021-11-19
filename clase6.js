@@ -49,10 +49,11 @@ function procesar(array, callback){
 
 
 //METODOS DE ARRAY PARTE 2
-los metodos de array reciben un callback
-el map y el filter retornan un array nuevo
-el reduce retorna cualquier tipo de dato que deseemos 
-el foreach sirve para iterar un elemento o array
+/*los metodos de array reciben un callback
+-el map retorna una array con el numero de elementos intacto pero cada elemento modificado
+-el filter retorna un array nuevo con el numero de elementos modificado
+-el reduce retorna cualquier tipo de dato que deseemos. se debe poner un valor inicial a 0. Retorna un array modificado en valores y en numero de elementos
+-el foreach sirve para iterar un elemento o array. No devuelve ningun array nuevo
 algoritmo: serie de pasos logicos detallado de lo que se debe hacer
 //Ejercicio 1, Filter
 let estudiantes = [
@@ -65,7 +66,7 @@ let desaprobados= estudiantes.filter(p=> p.promedio< 7
 );
 //Tambien se puede
 //Estudiantes como parametro hace referencia a cada elemento del array
-//Tambien como logica del callback se puede usar el dato true de arpobado com criterio de filtrado, estudiantes: aprobado; se necesita de un dato para definir la funcion
+//Tambien como logica del callback se puede usar el dato true de arpobado como criterio de filtrado, estudiantes: aprobado; se necesita de un dato para definir la funcion
 let aprobados= estudiantes.filter(function(estudiantes){
     return estudiantes.promedio>= 7;
 });
