@@ -159,7 +159,53 @@ app.get(("/producto/agregar"), (req, res)=> {
     res.send(producto); //Enviamos un objeto como respuesta
 });
 
+ESTRUCTURA DE CARPETAS Y SENDFILE
+-Sendfile nos permite enviar un archivo existente en nuestro servidor; responder con un archivo
+-Sendfile admite un parametro la ruta absoluta del archivo a enviar
+-Primero se debe requerir el modulo nativo path y guardarlo en una variable
+const path= require("path");
+-Dentro del metodo sendFile usaremos sobre el objeto path el metodo join
+-.join une las dos piezas de la ruta absoluta, la constante __dirname y el path relativo:
+__dirname es una constante o una variable dinamica de node.js que hace referencia a la direccion del archivo que se esta ejecutando; indica cual es la ubicacion del archivo
+el path relativo es la ubicacion del archivo que queremos enviar; hace referencia a la direccion pero teniendo en cuenta quien provee la direccion
 
+res.sendFile(path.join (__dirname, "/carpeta/archivo.extension"))
+
+Ejercicio 1, About us
+Queremos que al usuario, al ingresar al about-us, se le envie la siguiente vista: about-us.html. Esta misma se encuentra en la carpeta views.
+const path = require('path');
+
+app.get('/', (req, res) => {
+    let htmlFile= path.join(__dirname, ("/views/about-us.html"));
+    res.sendFile(htmlFile);
+});
+
+Ejercicio 1, Hacia la clase en vivo
+
+¿Qué deberás hacer?. Tendrás que levantar un servidor en el puerto 3000 y responder a dos rutas get. La ruta root (/), debe responder enviando la vista en el directorio /views/home.html; y la ruta 404 (/404), debe enviar "Error página no encontrada". Para esto deberás hacer uso de la librería path y de la función sendfile entre otras cosas ya vistas.
+Pasos guía / ayuda para la resolución:
+
+1) Importar tanto el framework Express y path.
+2) Crear una instancia de Express.
+3) Poner al servidor a escuchar al puerto 3000.
+4) Agregar la ruta 404 y enviar el mensaje correspondiente.
+5) Agregar la ruta root (/) del home y enviar el archivo correspondiente.
+
+const express= require("express");
+const path= require("path");
+const app= express();
+
+app.get (("/404"),(req, res)=> {
+res.send("Error página no encontrada");
+});
+app.get("/", (req, res)=> {
+    let htmlPath= path.join(__dirname, ("/views/home.html"));
+    res.sendFile(htmlPath);
+})
+
+app.listen((3000), ()=>console.log(""));
 
 
 */
+
+
