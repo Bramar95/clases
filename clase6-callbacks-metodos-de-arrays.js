@@ -17,7 +17,6 @@ function aplicarCallback(numero, callback) {
     return callback(numero);
 };
 
-
 //ejercicio 2, hagamos una calculadora
 //realice funciones arrow de las operaciones por separado y luego las integre a la funcion padre
 let suma= (numeroA, numeroB)=> numeroA+ numeroB;
@@ -45,7 +44,6 @@ function procesar(array, callback){
     return nuevoArray;
 };
 //Tambien se puede pasar otro callback que no sea agregarHTTP mientras que en la logica interna de fn padre respete el tipo de dato con el que se opera
-
 
 
 //METODOS DE ARRAY PARTE 2
